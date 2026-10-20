@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>benchmark 采集汇总列表</title><style>body{margin:0;background:#0b1020;color:#e8ecf8;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;padding:24px;line-height:1.6}h1{font-size:24px}h2{font-size:18px;margin-top:28px;border-left:4px solid #4f8cff;padding-left:10px}table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}th,td{border:1px solid #26304d;padding:7px 9px;text-align:left;vertical-align:top}th{background:#141a30;color:#93a0c0}td{background:#0f1730}.q{color:#93a0c0}a{color:#22d3ee}</style></head><body><p><a href="cyberdata-platform.html">‹ 返回平台主页</a></p><h1>benchmark 数据采集汇总列表</h1>
+<p class="q">生成时间：2026-10-20 11:31:28　｜　覆盖 **682/682** 个 benchmark　｜　落盘 **513.9 GiB**</p>
+<p class="q">数据目录：`/media/hongtao/T71/benchmark`（P1 23 · P2 266 · P3 219 · P4 174）</p>
+<h2>总览</h2>
+<table>
+<tr><th>优先级</th><th>目录数</th><th>完成</th><th>部分</th><th>失败源</th><th>门控/待批</th><th>其它</th></tr>
+<tr><td>P1</td><td>23</td><td>59</td><td>见下</td><td>0</td><td>3</td><td>0</td></tr>
+<tr><td>P2</td><td>266</td><td>518</td><td>见下</td><td>9</td><td>0</td><td>5</td></tr>
+<tr><td>P3</td><td>219</td><td>302</td><td>见下</td><td>18</td><td>3</td><td>10</td></tr>
+<tr><td>P4</td><td>174</td><td>209</td><td>见下</td><td>22</td><td>1</td><td>10</td></tr>
+<tr><td>**合计**</td><td>**682**</td><td>**1088**</td><td>—</td><td>**49**</td><td>**7**</td><td>**25**</td></tr>
+</table>
+<h3>源状态码说明</h3>
+<table>
+<tr><th>状态</th><th>数量</th><th>含义</th></tr>
+<tr><td>`done`</td><td>1088</td><td>已完成（含镜像替代）</td></tr>
+<tr><td>`fail`</td><td>49</td><td>失败：需人工/换源</td></tr>
+<tr><td>`no_mirror`</td><td>22</td><td>无可信镜像可替代</td></tr>
+<tr><td>`paused_awaiting_approval`</td><td>7</td><td>HF 门控=manual，等待作者批准</td></tr>
+<tr><td>`skipped_too_large`</td><td>2</td><td>体积超护栏跳过</td></tr>
+<tr><td>`no_repo`</td><td>1</td><td>源仓库不存在(404)</td></tr>
+</table>
+<h2>1. 自动下载成功（镜像替代）（20）</h2>
+<table>
+<tr><th>优先级</th><th>benchmark</th><th>源 / 镜像</th><th>大小</th><th>备注</th></tr>
+<tr><td>P2</td><td>air-bench-2024</td><td>镜像 `stanford-crfm/air-bench-2024`</td><td>5.7 MB</td><td></td></tr>
+<tr><td>P2</td><td>cve-bench-gatti-pinheiro-repair</td><td>镜像 `vartia/cvebench`</td><td>5.1 MB</td><td></td></tr>
+<tr><td>P2</td><td>pvbench</td><td>镜像 `PVBench/PVBench`</td><td>6.2 MB</td><td></td></tr>
+<tr><td>P2</td><td>seccodebench</td><td>镜像 `alibaba/sec-code-bench`</td><td>93.1 MB</td><td>tar.gz 240MiB</td></tr>
+<tr><td>P2</td><td>vader</td><td>镜像 `AITuring/Vader`</td><td>80.9 MB</td><td>Cloning into &#x27;/media/hongtao/T71/benchmark/P2/vader/mirror_gh_AITuring_Vader&#x27;...</td></tr>
+<tr><td>P2</td><td>vulbench-hustcw</td><td>镜像 `Hustcw/VulBench`</td><td>6.2 MB</td><td>tar.gz 6MiB</td></tr>
+<tr><td>P2</td><td>vulnbench</td><td>镜像 `vulnbench/vulnbench`</td><td>305.1 MB</td><td>tar.gz 93MiB</td></tr>
+<tr><td>P3</td><td>agentic-pcap</td><td>镜像 `maureille/agentic-pcap`</td><td>77240.6 MB</td><td></td></tr>
+<tr><td>P3</td><td>c4audit</td><td>镜像 `samscrack/c4-audit-findings`</td><td>7.2 MB</td><td></td></tr>
+<tr><td>P3</td><td>hackbench</td><td>镜像 `HackBench/HackBench`</td><td>1.5 MB</td><td></td></tr>
+<tr><td>P3</td><td>splunk-attack-data</td><td>镜像 `tom-gibbs/multi-turn_jailbreak_attack_datasets`</td><td>22.2 MB</td><td></td></tr>
+<tr><td>P3</td><td>terminal-wrench</td><td>镜像 `few-sh/terminal-wrench`</td><td>6390.5 MB</td><td></td></tr>
+<tr><td>P3</td><td>wainjectbench</td><td>镜像 `Norrrrrrr/WAInjectBench`</td><td>2083.3 MB</td><td></td></tr>
+<tr><td>P4</td><td>doxbench</td><td>镜像 `MomoUchi/DoxBench`</td><td>2182.5 MB</td><td></td></tr>
+<tr><td>P4</td><td>iot-23</td><td>镜像 `19kmunz/iot-23-preprocessed-minimumcolumns`</td><td>0.0 MB</td><td></td></tr>
+<tr><td>P4</td><td>litnet-2020</td><td>镜像 `sukengine/LITNET2020`</td><td>11332.7 MB</td><td></td></tr>
+<tr><td>P4</td><td>mabel</td><td>镜像 `lukegamedev/Mabel`</td><td>17.5 MB</td><td></td></tr>
+<tr><td>P4</td><td>motif</td><td>镜像 `PGT/unbalanced-motifs-50K`</td><td>77.9 MB</td><td></td></tr>
+<tr><td>P4</td><td>n-baiot</td><td>镜像 `codymlewis/nbaiot`</td><td>0.0 MB</td><td></td></tr>
+<tr><td>P4</td><td>otrf-security-datasets-mordor</td><td>镜像 `Umesh1212/security-datasets-CAI-agent-tools`</td><td>0.2 MB</td><td></td></tr>
+</table>
+<h2>2. 无镜像可替代（22）</h2>
+<table>
+<tr><th>优先级</th><th>benchmark</th><th>源 / 镜像</th><th>大小</th><th>备注</th></tr>
+<tr><td>P2</td><td>pairvul-vul-rag</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P2</td><td>vudenc-vulnerability-datasets</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>backdoorllm</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>crebench-cryptographic-reverse-engineering</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>cryptanalysis-benchmark-eth-spy-lab</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>dappscan</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>evmbench</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>forge-smart-contract-datasets</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>llm-pbe</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>nyu-ctf-bench</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>scrawld</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P3</td><td>smartbugs-wild</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>ait-log-dataset</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>autodfbench</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>casinolimit</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>cisco-talos-binary-function-similarity-datasets</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>dedale</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>hardware-trojan-dataset-of-risc-v-and-web3</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>road-can-intrusion-dataset</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>trust-hub-hardware-trojan-benchmarks</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>ustc-tfc2016</td><td>镜像 ``</td><td>—</td><td></td></tr>
+<tr><td>P4</td><td>westermo-network-traffic-dataset</td><td>镜像 ``</td><td>—</td><td></td></tr>
+</table>
+<h2>3. 等待作者批准（HF gated=manual）（7）</h2>
+<table>
+<tr><th>优先级</th><th>benchmark</th><th>源 / 镜像</th><th>大小</th><th>备注</th></tr>
+<tr><td>P1</td><td>patchdb</td><td>https://huggingface.co/api/datasets/sunlab/patch_db/tree/main?recursive=true&amp;limit=1000</td><td>—</td><td>已提交 Request access，等待作者批准（用户指定：该类暂停）</td></tr>
+<tr><td>P1</td><td>pysecdb</td><td>https://huggingface.co/datasets/sunlab/PySecDB</td><td>—</td><td>已提交 Request access，等待作者批准（用户指定：该类暂停）</td></tr>
+<tr><td>P1</td><td>pysecdb</td><td>https://huggingface.co/api/datasets/sunlab/PySecDB/tree/main?recursive=true&amp;limit=1000</td><td>—</td><td>已提交 Request access，等待作者批准（用户指定：该类暂停）</td></tr>
+<tr><td>P3</td><td>postexploitbench</td><td>https://huggingface.co/api/datasets/AgentCyberRange/PostExploitBench/tree/main?recursive=t</td><td>—</td><td>已提交 Request access，等待作者批准（用户指定：该类暂停）</td></tr>
+<tr><td>P3</td><td>webexploitbench</td><td>https://huggingface.co/datasets/AgentCyberRange/WebExploitBench</td><td>—</td><td>已提交 Request access，等待作者批准（用户指定：该类暂停）</td></tr>
+<tr><td>P3</td><td>webexploitbench</td><td>https://huggingface.co/api/datasets/AgentCyberRange/WebExploitBench/tree/main?recursive=tr</td><td>—</td><td>已提交 Request access，等待作者批准（用户指定：该类暂停）</td></tr>
+<tr><td>P4</td><td>doxbench</td><td>https://huggingface.co/api/datasets/MomoUchi/DoxBench/tree/main?recursive=true&amp;limit=1000</td><td>—</td><td>已提交 Request access，等待作者批准（用户指定：该类暂停）</td></tr>
+</table>
+<h2>4. 仍失败（需人工 / 换源）（49）</h2>
+<table>
+<tr><th>优先级</th><th>benchmark</th><th>源 / 镜像</th><th>大小</th><th>备注</th></tr>
+<tr><td>P2</td><td>air-bench-2024</td><td>https://github.com/stanford-crfm/air-bench-2024</td><td>—</td><td>and retry with &#x27;git restore --source=HEAD :/&#x27;</td></tr>
+<tr><td>P2</td><td>cve-bench-gatti-pinheiro-repair</td><td>https://github.com/GiovanniGatti/cve-bench</td><td>—</td><td>and retry with &#x27;git restore --source=HEAD :/&#x27;</td></tr>
+<tr><td>P2</td><td>pairvul-vul-rag</td><td>https://doi.org/10.1145/3797277</td><td>—</td><td>HTTP 403</td></tr>
+<tr><td>P2</td><td>pvbench</td><td>https://github.com/cla7aye15I4nd/PVBench</td><td>—</td><td>and retry with &#x27;git restore --source=HEAD :/&#x27;</td></tr>
+<tr><td>P2</td><td>seccodebench</td><td>https://github.com/alibaba/sec-code-bench</td><td>—</td><td>and retry with &#x27;git restore --source=HEAD :/&#x27;</td></tr>
+<tr><td>P2</td><td>vader</td><td>https://github.com/AfterQuery/vader</td><td>—</td><td>fatal: could not read Username for &#x27;https://github.com&#x27;: terminal prompts disabl</td></tr>
+<tr><td>P2</td><td>vudenc-vulnerability-datasets</td><td>https://zenodo.org/records/3559841</td><td>81.7 MB</td><td>TimeoutError</td></tr>
+<tr><td>P2</td><td>vulbench-hustcw</td><td>https://github.com/Hustcw/VulBench</td><td>—</td><td>and retry with &#x27;git restore --source=HEAD :/&#x27;</td></tr>
+<tr><td>P2</td><td>vulnbench</td><td>https://github.com/vulnbench/vulnbench</td><td>—</td><td>and retry with &#x27;git restore --source=HEAD :/&#x27;</td></tr>
+<tr><td>P3</td><td>agentic-pcap</td><td>https://huggingface.co/api/datasets/maureille/agentic-pcap/tree/main?recursive=true&amp;limit=</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>backdoorllm</td><td>https://github.com/bboylyg/BackdoorLLM</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>c4audit</td><td>https://zenodo.org/records/17571170</td><td>48.0 MB</td><td>TimeoutError</td></tr>
+<tr><td>P3</td><td>crebench-cryptographic-reverse-engineering</td><td>https://huggingface.co/api/datasets/Danny-1223/CREBench/tree/main?recursive=true&amp;limit=100</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>cryptanalysis-benchmark-eth-spy-lab</td><td>https://github.com/ethz-spylab/cryptanalysis-benchmark</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>dappscan</td><td>https://github.com/InPlusLab/DAppSCAN</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>decodingtrust</td><td>https://github.com/AI-secure/DecodingTrust</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>decodingtrust</td><td>镜像 `AI-Secure/DecodingTrust`</td><td>—</td><td>gated/403</td></tr>
+<tr><td>P3</td><td>evmbench</td><td>https://openai.com/index/introducing-evmbench/</td><td>—</td><td>HTTP 403</td></tr>
+<tr><td>P3</td><td>forge-smart-contract-datasets</td><td>https://github.com/shenyimings/FORGE-Artifacts</td><td>—</td><td>and retry with &#x27;git restore --source=HEAD :/&#x27;</td></tr>
+<tr><td>P3</td><td>hackbench</td><td>https://github.com/ElectrovoltSec/HackBench</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>llm-pbe</td><td>https://github.com/QinbinLi/LLM-PBE</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>nyu-ctf-bench</td><td>https://github.com/nyu-llm-ctf/nyu_ctf_bench</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>scrawld</td><td>https://github.com/sujeetc/ScrawlD</td><td>—</td><td>and retry with &#x27;git restore --source=HEAD :/&#x27;</td></tr>
+<tr><td>P3</td><td>smartbugs-wild</td><td>https://github.com/smartbugs/smartbugs-wild</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>splunk-attack-data</td><td>https://github.com/splunk/attack_data</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>terminal-wrench</td><td>https://github.com/few-sh/terminal-wrench</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P3</td><td>wainjectbench</td><td>https://github.com/Norrrrrrr-lyn/WAInjectBench</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P4</td><td>ait-log-dataset</td><td>https://zenodo.org/record/5789064</td><td>51.0 MB</td><td>TimeoutError</td></tr>
+<tr><td>P4</td><td>autodfbench</td><td>https://github.com/akila-UCD/AutoDFBench</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P4</td><td>casinolimit</td><td>https://zenodo.org/records/17256954</td><td>44.0 MB</td><td>TimeoutError</td></tr>
+<tr><td>P4</td><td>cisco-talos-binary-function-similarity-datasets</td><td>https://github.com/Cisco-Talos/binary_function_similarity</td><td>—</td><td>and retry with &#x27;git restore --source=HEAD :/&#x27;</td></tr>
+<tr><td>P4</td><td>dedale</td><td>https://dedale.inria.fr/download.html</td><td>—</td><td>URLError</td></tr>
+<tr><td>P4</td><td>doxbench</td><td>https://github.com/SaFo-Lab/DoxBench</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P4</td><td>hai</td><td>https://github.com/icsdataset/hai</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P4</td><td>hai</td><td>镜像 `HairCS2027/HairCS`</td><td>—</td><td>snapshot timeout &gt;1200s</td></tr>
+<tr><td>P4</td><td>hardware-trojan-dataset-of-risc-v-and-web3</td><td>https://www.mdpi.com/2306-5729/9/6/82</td><td>—</td><td>HTTP 403</td></tr>
+<tr><td>P4</td><td>iot-23</td><td>https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/iot_23_datasets_full.tar.gz</td><td>—</td><td>TimeoutError</td></tr>
+<tr><td>P4</td><td>iot-23</td><td>https://mcfp.felk.cvut.cz/publicDatasets/IoT-23-Dataset/iot_23_datasets_small.tar.gz</td><td>—</td><td>TimeoutError</td></tr>
+<tr><td>P4</td><td>litnet-2020</td><td>https://github.com/Grigaliunas/electronics9050800/</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P4</td><td>mabel</td><td>https://github.com/action-ai-institute/MABEL-dataset</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P4</td><td>motif</td><td>https://github.com/boozallen/MOTIF</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P4</td><td>n-baiot</td><td>https://www.archive.ics.uci.edu/dataset/442/detection%2Bof%2Biot%2Bbotnet%2Battacks%2Bn%2B</td><td>—</td><td>URLError</td></tr>
+<tr><td>P4</td><td>otrf-security-datasets-mordor</td><td>https://github.com/OTRF/Security-Datasets</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P4</td><td>road-can-intrusion-dataset</td><td>https://zenodo.org/records/10462796</td><td>46.0 MB</td><td>TimeoutError</td></tr>
+<tr><td>P4</td><td>trust-hub-hardware-trojan-benchmarks</td><td>https://www.trust-hub.org/downloads/publications/P15.pdf</td><td>—</td><td>URLError</td></tr>
+<tr><td>P4</td><td>ugr-16</td><td>https://nesg.ugr.es/nesg-ugr16/</td><td>—</td><td>HTTP 403</td></tr>
+<tr><td>P4</td><td>ugr-16</td><td>镜像 `mehedi107/ugr-16`</td><td>—</td><td>snapshot timeout &gt;1200s</td></tr>
+<tr><td>P4</td><td>ustc-tfc2016</td><td>https://github.com/yungshenglu/USTC-TFC2016</td><td>—</td><td>source timeout &gt;900s</td></tr>
+<tr><td>P4</td><td>westermo-network-traffic-dataset</td><td>https://github.com/westermo/network-traffic-dataset</td><td>—</td><td>source timeout &gt;900s</td></tr>
+</table>
+<h2>5. 源失效 / 超限跳过（3）</h2>
+<table>
+<tr><th>优先级</th><th>benchmark</th><th>源 / 镜像</th><th>大小</th><th>备注</th></tr>
+<tr><td>P2</td><td>cybergym-e2e</td><td>https://huggingface.co/api/datasets/sunblaze-ucb/cybergym-e2e/tree/main?recursive=true&amp;lim</td><td>—</td><td>HF 数据集体量过大（&gt;100GB 复现环境），按磁盘护栏跳过；如需可单独规划下载</td></tr>
+<tr><td>P2</td><td>safearena</td><td>https://huggingface.co/api/datasets/McGill-NLP/safearena/tree/main?recursive=true&amp;limit=10</td><td>—</td><td>HF 体积 99.2GB &gt; 上限 20.0GB，按护栏跳过</td></tr>
+<tr><td>P2</td><td>scambench</td><td>https://huggingface.co/datasets/maximusrafla/scambench</td><td>—</td><td>404 Client Error. (Request ID: Root=1-6ad63db7-36b3ba536c2a45217abb7b69;e88e6a42</td></tr>
+</table>
+<h2>附：剩余问题项速览</h2>
+<table>
+<tr><th>类别</th><th>数量</th><th>处置建议</th></tr>
+<tr><td>无镜像</td><td>22</td><td>无公开等价源；如需请联系原 benchmark 作者或提供替代 URL</td></tr>
+<tr><td>仍失败</td><td>49</td><td>多为网络不可达/超时；根因已修，可用指定源重试</td></tr>
+<tr><td>等待批准</td><td>7</td><td>需作者批准 HF gated=manual</td></tr>
+<tr><td>超限跳过</td><td>2</td><td>单数据集 99–118 GB，如需可单独规划</td></tr>
+<tr><td>源失效</td><td>1</td><td>仓库 404，建议登记为不可用</td></tr>
+</table></body></html>

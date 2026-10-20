@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 网络安全数据技术创新平台</title>
+<style>
+  :root { --bg:#0b1020; --card:#141a30; --line:#26304d; --text:#e8ecf8; --muted:#93a0c0;
+           --acc:#4f8cff; --acc2:#22d3ee; --ok:#34d399; --warn:#f59e0b; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+          font-family:-apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif; line-height:1.65; }
+  .wrap { max-width:1120px; margin:auto; padding:0 20px 60px; }
+  header { background:linear-gradient(135deg,#12203f 0%,#1b2b52 45%,#0f2a3f 100%);
+            border-bottom:1px solid var(--line); padding:34px 20px 26px; }
+  header .inner { max-width:1120px; margin:auto; display:flex; justify-content:space-between;
+                   align-items:flex-start; gap:16px; flex-wrap:wrap; }
+  h1 { font-size:30px; margin:0 0 6px; letter-spacing:.5px; }
+  .tag { color:var(--muted); font-size:14.5px; }
+  .lang { background:#1a2440; color:var(--acc2); border:1px solid var(--line); border-radius:20px;
+           padding:7px 16px; font-size:13px; cursor:pointer; font-family:inherit; }
+  .kpis { display:flex; gap:14px; flex-wrap:wrap; margin:26px 0 8px; }
+  .kpi { flex:1; min-width:170px; background:var(--card); border:1px solid var(--line);
+          border-radius:14px; padding:16px 18px; }
+  .kpi .v { font-size:24px; font-weight:800;
+             background:linear-gradient(90deg,var(--acc),var(--acc2)); -webkit-background-clip:text;
+             background-clip:text; color:transparent; }
+  .kpi .l { color:var(--muted); font-size:13px; margin-top:4px; }
+  h2 { font-size:19px; margin:38px 0 14px; padding-left:11px; border-left:4px solid var(--acc); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:14px; }
+  .cat-card { display:flex; gap:14px; background:var(--card); border:1px solid var(--line);
+               border-radius:14px; padding:16px; }
+  .cat-no { font-size:24px; font-weight:800; color:var(--acc); min-width:34px; }
+  .cat-body h3 { margin:0 0 4px; font-size:15.5px; }
+  .cat-size { color:var(--ok); font-size:13.5px; font-weight:700; }
+  .cat-body p { margin:6px 0 0; color:var(--muted); font-size:12.5px; }
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px 20px; }
+  .panel ul { margin:6px 0 0; padding-left:20px; color:var(--muted); font-size:14px; }
+  .panel li { margin:5px 0; }
+  .links { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; }
+  a.btn { display:block; text-decoration:none; color:var(--text); background:#182244;
+           border:1px solid var(--line); border-radius:12px; padding:14px 16px; transition:.15s; }
+  a.btn:hover { border-color:var(--acc); transform:translateY(-1px); }
+  a.btn small { display:block; color:var(--muted); margin-top:3px; font-size:12px; }
+  footer { margin-top:40px; color:var(--muted); font-size:12.5px; border-top:1px solid var(--line); padding-top:16px; }
+  .note { background:#1a2140; border:1px dashed var(--line); border-radius:12px; padding:14px 16px;
+           color:var(--muted); font-size:13px; margin-top:12px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <div>
+      <h1 data-en="AI Cybersecurity Data Technology Innovation Platform">AI 网络安全数据技术创新平台</h1>
+      <div class="tag" data-en="Automated collection · verification · normalization · delivery for cybersecurity corpora and benchmarks">
+        面向网络安全语料与基准的自动化采集 · 校验 · 归一化 · 投递
+      </div>
+    </div>
+    <button class="lang" id="langBtn" onclick="toggleLang()">🌐 EN</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="kpis">
+    <div class="kpi"><div class="v">11</div><div class="l" data-en="Data categories">数据大类</div></div>
+    <div class="kpi"><div class="v">506.93GiB</div><div class="l" data-en="Cyber data on disk">网络安全数据已落盘</div></div>
+    <div class="kpi"><div class="v">682</div><div class="l" data-en="Benchmarks covered">基准覆盖数</div></div>
+    <div class="kpi"><div class="v">514 GiB</div><div class="l" data-en="Benchmark data on disk">基准数据已落盘</div></div>
+    <div class="kpi"><div class="v">520/524</div><div class="l" data-en="Full-text papers">论文全文</div></div>
+    <div class="kpi"><div class="v">1739</div><div class="l" data-en="KEV CVEs enriched">KEV 漏洞情报（CVE）</div></div>
+  </div>
+
+  <h2 data-en="Data assets by category">数据资产（11 大类）</h2>
+  <div class="grid">
+    <div class="cat-card" data-en="General Vulnerability Databases · 8.28GiB"><div class="cat-no">①</div><div class="cat-body"><h3>① 通用漏洞数据库</h3><div class="cat-size">8.28GiB</div><p>NVD · OSV · CVE List · VulHub · KEV · Advisory DB</p></div></div><div class="cat-card" data-en="Vendor Security Advisories · 0.16GiB"><div class="cat-no">②</div><div class="cat-body"><h3>② 主流厂商安全公告</h3><div class="cat-size">0.16GiB</div><p>Microsoft MSRC · Red Hat · 厂商公告</p></div></div><div class="cat-card" data-en="Patch Commit Histories · 5.29GiB"><div class="cat-no">③</div><div class="cat-body"><h3>③ 补丁提交记录</h3><div class="cat-size">5.29GiB</div><p>OpenSSL · Linux stable · WebKit · Apple OSS</p></div></div><div class="cat-card" data-en="Security Standards · 1.18GiB"><div class="cat-no">④</div><div class="cat-body"><h3>④ 安全标准</h3><div class="cat-size">1.18GiB</div><p>NIST · ISO · PCI DSS · CIS · GB/T</p></div></div><div class="cat-card" data-en="CTF & Offense-Defense Communities · 7.94GiB"><div class="cat-no">⑤</div><div class="cat-body"><h3>⑤ CTF与攻防社区</h3><div class="cat-size">7.94GiB</div><p>CTFtime · HTB · PortSwigger · Exploit-DB</p></div></div><div class="cat-card" data-en="Vulnerability Reproduction & Exploits · 1.18GiB"><div class="cat-no">⑥</div><div class="cat-body"><h3>⑥ 漏洞复现与漏洞利用</h3><div class="cat-size">1.18GiB</div><p>Project Zero · ZDI · Metasploit · Nuclei</p></div></div><div class="cat-card" data-en="Academic Security Datasets · 1.67GiB"><div class="cat-no">⑦</div><div class="cat-body"><h3>⑦ 学术安全数据集</h3><div class="cat-size">1.67GiB</div><p>论文全文 520/524 · 数据集/基准清单</p></div></div><div class="cat-card" data-en="Source Code / Binaries · 0.00GiB"><div class="cat-no">⑧</div><div class="cat-body"><h3>⑧ 源代码/二进制</h3><div class="cat-size">0.00GiB</div><p>包生态（hold：PyPI/npm/Maven…）</p></div></div><div class="cat-card" data-en="Security Conference & Agency Reports · 195.20GiB"><div class="cat-no">⑨</div><div class="cat-body"><h3>⑨ 安全会议机构报告</h3><div class="cat-size">195.20GiB</div><p>USENIX · NDSS · arXiv cs.CR · DEF CON</p></div></div><div class="cat-card" data-en="Open-Source Security Corpora · 17.02GiB"><div class="cat-no">⑩</div><div class="cat-body"><h3>⑩ 开源安全语料</h3><div class="cat-size">17.02GiB</div><p>HuggingFace 语料库 15 源</p></div></div><div class="cat-card" data-en="Open-Source Cybersecurity CPT Datasets · 269.01GiB"><div class="cat-no">⑪</div><div class="cat-body"><h3>⑪ 开源网络安全CPT训练数据集</h3><div class="cat-size">269.01GiB</div><p>CPT 训练数据集（CVEfixes · RedSage · PrimeVul…）</p></div></div>
+  </div>
+
+  <h2 data-en="Platform capabilities">平台能力</h2>
+  <div class="panel">
+    <ul>
+      <li data-en="Multi-source crawlers (GitHub / HuggingFace / arXiv / Zenodo / official sites), idempotent with resume">
+        多源采集器（GitHub / HuggingFace / arXiv / Zenodo / 官方站点），幂等 + 断点续传</li>
+      <li data-en="Integrity verification: file-level comparison against upstream manifests; disk-truth accounting">
+        完整性校验：与上游文件清单逐条比对；一切以磁盘实测为准</li>
+      <li data-en="Unified size accounting; category total strictly equals sum of its items; grand total equals sum of categories">
+        统一计量口径：每大类严格等于子项之和；总量严格等于各大类之和</li>
+      <li data-en="Guardrails: per-dataset size cap (20 GB) and free-space floors (100/300 GiB) auto-pause">
+        护栏：单数据集上限 20 GB；磁盘余量下限（100/300 GiB）自动暂停</li>
+      <li data-en="Scheduled sync &amp; publish: every 30 min regenerate the dashboard and push to GitHub">
+        定时同步与发布：每 30 分钟重生成看板并推送到 GitHub</li>
+      <li data-en="Trusted-mirror first: when a source requires registration, prefer GitHub/HuggingFace mirrors">
+        可信镜像优先：源需注册/授权时，优先改用 GitHub/HuggingFace 镜像</li>
+    </ul>
+  </div>
+
+  <h2 data-en="Data entry points">数据入口</h2>
+  <div class="links">
+    <a class="btn" href="cyberllmdata_progress.html">
+      <b data-en="Crawling progress dashboard (11 categories)">数据采集进展看板（11 大类）</b>
+      <small data-en="Per-source status, sizes, integrity audit">逐源状态 · 体积 · 完整性审计</small></a>
+    <a class="btn" href="https://github.com/NGSecure/data_summary">
+      <b data-en="GitHub: data_summary">GitHub：data_summary</b>
+      <small data-en="Auto-published every 30 minutes">每 30 分钟自动发布</small></a>
+    <a class="btn" href="https://ngsecure.github.io/data_summary/">
+      <b data-en="GitHub Pages (published dashboard)">GitHub Pages（已发布看板）</b>
+      <small data-en="Public read-only view">对外只读视图</small></a>
+    <a class="btn" href="bench_mark_list.html">
+      <b data-en="Benchmark collection summary">基准采集汇总列表</b>
+      <small data-en="682 benchmarks · status &amp; reasons">682 个基准 · 状态与原因</small></a>
+  </div>
+
+  <h2 data-en="Compliance &amp; provenance">合规与溯源</h2>
+  <div class="panel">
+    <ul>
+      <li data-en="Licenses and access terms are recorded per source; gated datasets are never auto-requested on the user's behalf">
+        每个源记录许可与访问条款；门控数据集**不代为申请**，需权利人批准</li>
+      <li data-en="Restricted sources are documented (404 / paywall / login) instead of being silently counted">
+        受限源如实记录（404 / 付费墙 / 需登录），不虚报为已获取</li>
+      <li data-en="Original links are preserved for traceability; community mirrors are labeled as such">
+        保留原始链接以便溯源；社区镜像均标注来源</li>
+    </ul>
+  </div>
+
+  <footer>
+    <div data-en="Generated at 2026-10-20 15:06:04 · data root: /media/hongtao/T7/cyberllmdata &amp; T71/benchmark">
+      生成于 2026-10-20 15:06:04 · 数据根目录：/media/hongtao/T7/cyberllmdata 与 T71/benchmark</div>
+  </footer>
+</div>
+
+<script>
+var LANG = localStorage.getItem("cyberdata_lang") || "zh";
+function applyLang() {
+  var en = LANG === "en";
+  document.documentElement.lang = en ? "en" : "zh-CN";
+  document.getElementById("langBtn").textContent = en ? "🌐 中文" : "🌐 EN";
+  var els = document.querySelectorAll("[data-en]");
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    if (!el.hasAttribute("data-zh")) el.setAttribute("data-zh", el.innerHTML);
+    el.innerHTML = en ? el.getAttribute("data-en") : el.getAttribute("data-zh");
+  }
+}
+function toggleLang() { LANG = LANG === "zh" ? "en" : "zh"; localStorage.setItem("cyberdata_lang", LANG); applyLang(); }
+applyLang();
+</script>
+</body>
+</html>
