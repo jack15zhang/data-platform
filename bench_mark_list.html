@@ -1,23 +1,23 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>benchmark 采集汇总列表</title><style>body{margin:0;background:#0b1020;color:#e8ecf8;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;padding:24px;line-height:1.6}h1{font-size:24px}h2{font-size:18px;margin-top:28px;border-left:4px solid #4f8cff;padding-left:10px}table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}th,td{border:1px solid #26304d;padding:7px 9px;text-align:left;vertical-align:top}th{background:#141a30;color:#93a0c0}td{background:#0f1730}.q{color:#93a0c0}a{color:#22d3ee}</style></head><body><p><a href="cyberdata-platform.html">‹ 返回平台主页</a></p><h1>benchmark 数据采集汇总列表</h1>
-<p class="q">生成时间：2026-10-20 11:31:28　｜　覆盖 **682/682** 个 benchmark　｜　落盘 **513.9 GiB**</p>
+<p class="q">生成时间：2026-10-20 21:56:41　｜　覆盖 **682/682** 个 benchmark　｜　落盘 **761.6 GiB**</p>
 <p class="q">数据目录：`/media/hongtao/T71/benchmark`（P1 23 · P2 266 · P3 219 · P4 174）</p>
 <h2>总览</h2>
 <table>
 <tr><th>优先级</th><th>目录数</th><th>完成</th><th>部分</th><th>失败源</th><th>门控/待批</th><th>其它</th></tr>
 <tr><td>P1</td><td>23</td><td>59</td><td>见下</td><td>0</td><td>3</td><td>0</td></tr>
-<tr><td>P2</td><td>266</td><td>518</td><td>见下</td><td>9</td><td>0</td><td>5</td></tr>
+<tr><td>P2</td><td>266</td><td>520</td><td>见下</td><td>9</td><td>0</td><td>3</td></tr>
 <tr><td>P3</td><td>219</td><td>302</td><td>见下</td><td>18</td><td>3</td><td>10</td></tr>
 <tr><td>P4</td><td>174</td><td>209</td><td>见下</td><td>22</td><td>1</td><td>10</td></tr>
-<tr><td>**合计**</td><td>**682**</td><td>**1088**</td><td>—</td><td>**49**</td><td>**7**</td><td>**25**</td></tr>
+<tr><td>**合计**</td><td>**682**</td><td>**1090**</td><td>—</td><td>**49**</td><td>**7**</td><td>**23**</td></tr>
 </table>
 <h3>源状态码说明</h3>
 <table>
 <tr><th>状态</th><th>数量</th><th>含义</th></tr>
-<tr><td>`done`</td><td>1088</td><td>已完成（含镜像替代）</td></tr>
+<tr><td>`done`</td><td>1090</td><td>已完成（含镜像替代）</td></tr>
 <tr><td>`fail`</td><td>49</td><td>失败：需人工/换源</td></tr>
 <tr><td>`no_mirror`</td><td>22</td><td>无可信镜像可替代</td></tr>
 <tr><td>`paused_awaiting_approval`</td><td>7</td><td>HF 门控=manual，等待作者批准</td></tr>
-<tr><td>`skipped_too_large`</td><td>2</td><td>体积超护栏跳过</td></tr>
+<tr><td>`skipped_too_large`</td><td>0</td><td>体积超护栏跳过</td></tr>
 <tr><td>`no_repo`</td><td>1</td><td>源仓库不存在(404)</td></tr>
 </table>
 <h2>1. 自动下载成功（镜像替代）（20）</h2>
@@ -134,11 +134,9 @@
 <tr><td>P4</td><td>ustc-tfc2016</td><td>https://github.com/yungshenglu/USTC-TFC2016</td><td>—</td><td>source timeout &gt;900s</td></tr>
 <tr><td>P4</td><td>westermo-network-traffic-dataset</td><td>https://github.com/westermo/network-traffic-dataset</td><td>—</td><td>source timeout &gt;900s</td></tr>
 </table>
-<h2>5. 源失效 / 超限跳过（3）</h2>
+<h2>5. 源失效 / 超限跳过（1）</h2>
 <table>
 <tr><th>优先级</th><th>benchmark</th><th>源 / 镜像</th><th>大小</th><th>备注</th></tr>
-<tr><td>P2</td><td>cybergym-e2e</td><td>https://huggingface.co/api/datasets/sunblaze-ucb/cybergym-e2e/tree/main?recursive=true&amp;lim</td><td>—</td><td>HF 数据集体量过大（&gt;100GB 复现环境），按磁盘护栏跳过；如需可单独规划下载</td></tr>
-<tr><td>P2</td><td>safearena</td><td>https://huggingface.co/api/datasets/McGill-NLP/safearena/tree/main?recursive=true&amp;limit=10</td><td>—</td><td>HF 体积 99.2GB &gt; 上限 20.0GB，按护栏跳过</td></tr>
 <tr><td>P2</td><td>scambench</td><td>https://huggingface.co/datasets/maximusrafla/scambench</td><td>—</td><td>404 Client Error. (Request ID: Root=1-6ad63db7-36b3ba536c2a45217abb7b69;e88e6a42</td></tr>
 </table>
 <h2>附：剩余问题项速览</h2>
@@ -147,6 +145,6 @@
 <tr><td>无镜像</td><td>22</td><td>无公开等价源；如需请联系原 benchmark 作者或提供替代 URL</td></tr>
 <tr><td>仍失败</td><td>49</td><td>多为网络不可达/超时；根因已修，可用指定源重试</td></tr>
 <tr><td>等待批准</td><td>7</td><td>需作者批准 HF gated=manual</td></tr>
-<tr><td>超限跳过</td><td>2</td><td>单数据集 99–118 GB，如需可单独规划</td></tr>
+<tr><td>超限跳过</td><td>0</td><td>单数据集 99–118 GB，如需可单独规划</td></tr>
 <tr><td>源失效</td><td>1</td><td>仓库 404，建议登记为不可用</td></tr>
 </table></body></html>
