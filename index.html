@@ -49,17 +49,17 @@
   </div>
   <button class="lang-btn" id="langBtn" onclick="toggleLang()">🌐 EN</button>
 </div>
-<div class="live" id="liveBadge" data-en="🏁 All crawler batches completed (2148.44GiB on disk)">🏁 全部爬虫批次均已收官（数据已落盘 2148.44GiB）</div>
+<div class="live" id="liveBadge" data-en="🏁 All crawler batches completed (2150.99GiB on disk)">🏁 全部爬虫批次均已收官（数据已落盘 2150.99GiB）</div>
 
 <div class="kpis">
   <div class="kpi"><div class="v">11</div><div class="l" data-en="Rounds completed">轮次完成</div></div>
-  <div class="kpi"><div class="v" data-gib-total='214844'>2148.44GiB</div><div class="l" data-en="Total (sum of categories)">已落盘总量（各大类之和）</div></div>
+  <div class="kpi"><div class="v" data-gib-total='215099'>2150.99GiB</div><div class="l" data-en="Total (sum of categories)">已落盘总量（各大类之和）</div></div>
   <div class="kpi"><div class="v">992.6G</div><div class="l" data-en="Disk free (guardrail: 300G)">磁盘余量（护栏 300G）</div></div>
 </div>
 
 <div class="note" data-en="<b>Note</b>: = already covered by batch 1. Credential-required: CNVD, CNNVD, Cisco openVuln, VulnCheck, ISO, PCI DSS, GB-T, CIS Benchmarks — provide credentials to enqueue."><b>说明</b>： = 第一批已覆盖。需凭据项：CNVD、CNNVD、Cisco openVuln、VulnCheck、ISO、PCI DSS、GB-T、CIS Benchmarks——提供凭据即可加入队列。</div>
 
-<div class="cat" data-cat="① 通用漏洞数据库" data-gib-cat="828" data-en="① Common Vulnerability Databases <small>8 sources (downloaded: 8.28GiB)</small>">① 通用漏洞数据库 <small>共 8 源（已下载：8.28GiB）</small></div>
+<div class="cat" data-cat="① 通用漏洞数据库" data-gib-cat="980" data-en="① Common Vulnerability Databases <small>10 sources (downloaded: 9.80GiB)</small>">① 通用漏洞数据库 <small>共 10 源（已下载：9.80GiB）</small></div>
 <table><tr><th data-en="Source">数据源</th><th data-en="Link">链接</th><th data-en="Status">状态</th><th data-en="Format">格式</th><th data-en="Notes">备注</th></tr>
 <tr><td data-en="MITRE CVE List">MITRE CVE List</td><td class='url' data-en="cve.org">cve.org</td><td class='st-ok' data-gib='358' data-en="Done (3.58GiB)">完成 (3.58GiB)</td><td data-en="JSON 5.0">JSON 5.0</td><td class='url' data-en="cvelistV5 · 403k entries · from batch 1">cvelistV5 · 40.3万条 · 第一批已有</td></tr>
 <tr><td data-en="NVD">NVD</td><td class='url' data-en="nvd.nist.gov">nvd.nist.gov</td><td class='st-ok' data-gib='187' data-en="Done (1.87GiB)">完成 (1.87GiB)</td><td data-en="JSON 2.0 (API)">JSON 2.0 (API)</td><td class='url' data-en="API 2.0 full pagination">API 2.0 全量分页</td></tr>
@@ -68,7 +68,9 @@
 <tr><td data-en="CNNVD">CNNVD</td><td class='url' data-en="cnnvd.org.cn">cnnvd.org.cn</td><td class='st-wait' data-gib='0' data-en="Waiting">等待</td><td data-en="HTML/report">HTML/报告</td><td class='url' data-en="account required">需注册账号</td></tr>
 <tr><td data-en="VulHub">VulHub</td><td class='url' data-en="vulhub.org">vulhub.org</td><td class='st-ok' data-gib='34' data-en="Done (0.34GiB)">完成 (0.34GiB)</td><td data-en="git (docker-compose)">git (docker-compose)</td><td class='url' data-en="git clone">git clone</td></tr>
 <tr><td data-en="OSV">OSV</td><td class='url' data-en="osv.dev">osv.dev</td><td class='st-ok' data-gib='249' data-en="Done (2.49GiB)">完成 (2.49GiB)</td><td data-en="JSON (zip bulk)">JSON (zip 批量)</td><td class='url' data-en="official bulk zip (23 ecosystems)">官方批量 zip（23 生态）</td></tr>
-<tr><td data-en="VulnCheck">VulnCheck</td><td class='url' data-en="vulcheck.com">vulcheck.com</td><td class='st-wait' data-gib='0' data-en="Waiting">等待</td><td data-en="API JSON">API JSON</td><td class='url' data-en="commercial account required">需商业账号</td></tr>
+<tr><td data-en="VulnCheck">VulnCheck</td><td class='url' data-en="vulncheck.com">vulncheck.com</td><td class='st-wait' data-gib='0' data-en="Waiting">等待</td><td data-en="API JSON">API JSON</td><td class='url' data-en="commercial account required">需商业账号</td></tr>
+<tr><td data-en="Vulners 家族归档">Vulners 家族归档</td><td class='url' data-en="vulners.com">vulners.com</td><td class='st-ok' data-gib='147' data-en="Done (1.47GiB)">完成 (1.47GiB)</td><td data-en="—">—</td><td class='url' data-en="7 族整包 · ≈45.8 万条（ubuntu/centos/nessus 已由官方源覆盖，不重复）">7 族整包 · ≈45.8 万条（ubuntu/centos/nessus 已由官方源覆盖，不重复）</td></tr>
+<tr><td data-en="Vulners 逐条 CVE">Vulners 逐条 CVE</td><td class='url' data-en="vulners.com">vulners.com</td><td class='st-ok' data-gib='5' data-en="Done (0.05GiB)">完成 (0.05GiB)</td><td data-en="—">—</td><td class='url' data-en="1,739 条 CVE JSON">1,739 条 CVE JSON</td></tr>
 </table>
 <div class="cat" data-cat="② 主流厂商安全公告" data-gib-cat="34" data-en="② Major Vendor Security Advisories <small>10 sources (downloaded: 0.34GiB)</small>">② 主流厂商安全公告 <small>共 10 源（已下载：0.34GiB）</small></div>
 <table><tr><th data-en="Source">数据源</th><th data-en="Link">链接</th><th data-en="Status">状态</th><th data-en="Format">格式</th><th data-en="Notes">备注</th></tr>
@@ -83,9 +85,9 @@
 <tr><td data-en="Tencent TSRC">腾讯 TSRC</td><td class='url' data-en="tsrc.tencent.com">tsrc.tencent.com</td><td class='st-ok' data-gib='0' data-en="Done (0.00GiB)">完成 (0.00GiB)</td><td data-en="HTML">HTML</td><td class='url' data-en="公告页下钻">公告页下钻</td></tr>
 <tr><td data-en="Alibaba ASRC">阿里 ASRC</td><td class='url' data-en="security.alibaba.com">security.alibaba.com</td><td class='st-ok' data-gib='0' data-en="Done (0.00GiB)">完成 (0.00GiB)</td><td data-en="HTML">HTML</td><td class='url' data-en="公告页下钻">公告页下钻</td></tr>
 </table>
-<div class="cat" data-cat="③ 补丁提交记录" data-gib-cat="734" data-en="③ Patch / Commit Records <small>10 sources (downloaded: 7.34GiB)</small>">③ 补丁提交记录 <small>共 10 源（已下载：7.34GiB）</small></div>
+<div class="cat" data-cat="③ 补丁提交记录" data-gib-cat="837" data-en="③ Patch / Commit Records <small>10 sources (downloaded: 8.37GiB)</small>">③ 补丁提交记录 <small>共 10 源（已下载：8.37GiB）</small></div>
 <table><tr><th data-en="Source">数据源</th><th data-en="Link">链接</th><th data-en="Status">状态</th><th data-en="Format">格式</th><th data-en="Notes">备注</th></tr>
-<tr><td data-en="Linux Kernel Git">Linux Kernel Git</td><td class='url' data-en="git.kernel.org">git.kernel.org</td><td class='st-ok' data-gib='372' data-en="Done (3.72GiB)">完成 (3.72GiB)</td><td data-en="git objects">git 对象</td><td class='url' data-en="git clone depth 1">git clone 深度 1</td></tr>
+<tr><td data-en="Linux Kernel Git">Linux Kernel Git</td><td class='url' data-en="git.kernel.org">git.kernel.org</td><td class='st-ok' data-gib='475' data-en="Done (4.75GiB)">完成 (4.75GiB)</td><td data-en="git objects">git 对象</td><td class='url' data-en="git clone depth 1">git clone 深度 1</td></tr>
 <tr><td data-en="Android Gerrit">Android Gerrit</td><td class='url' data-en="android-review.googlesource.com">android-review.googlesource.com</td><td class='st-wait' data-gib='0' data-en="Waiting">等待</td><td data-en="Gerrit API/HTML">Gerrit API/HTML</td><td class='url' data-en="review platform; per-item crawl needed">评审平台，需逐条抓取方案</td></tr>
 <tr><td data-en="Apple Open Source">Apple Open Source</td><td class='url' data-en="github.com/apple-oss-distributions">github.com/apple-oss-distributions</td><td class='st-ok' data-gib='2' data-en="Done (0.02GiB)">完成 (0.02GiB)</td><td data-en="git/source pkg">git/源码包</td><td class='url' data-en="git clone 深度 1 · 官方org发行索引仓 distribution-macOS 928K + 全部发布源码包URL清单">git clone 深度 1 · 官方org发行索引仓 distribution-macOS 928K + 全部发布源码包URL清单</td></tr>
 <tr><td data-en="OpenSSL Git">OpenSSL Git</td><td class='url' data-en="github.com/openssl">github.com/openssl</td><td class='st-ok' data-gib='58' data-en="Done (0.58GiB)">完成 (0.58GiB)</td><td data-en="git objects">git 对象</td><td class='url' data-en="git clone depth 1">git clone 深度 1</td></tr>
@@ -249,7 +251,7 @@
 <tr><td data-en="CyberGym">CyberGym</td><td class='url' data-en="github.com/cybergym-iclr26/cybergym">github.com/cybergym-iclr26/cybergym</td><td class='st-ok' data-gib='22038' data-en="Done (220.38GiB)">完成 (220.38GiB)</td><td data-en="env/JSON">环境/JSON</td><td class='url' data-en="P2 · 共享⑦实际数据 · 任务元数据已核验，评测隔离">P2 · 共享⑦实际数据 · 任务元数据已核验，评测隔离</td></tr>
 </table>
 
-<div class="cat" data-en="📜 Crawler log (last 25 lines · generated 2026-10-23 11:09:46)">📜 爬虫日志（尾部 25 行 · 生成时间 2026-10-23 11:09:46）</div>
+<div class="cat" data-en="📜 Crawler log (last 25 lines · generated 2026-10-23 11:26:47)">📜 爬虫日志（尾部 25 行 · 生成时间 2026-10-23 11:26:47）</div>
 <pre id="logbox" data-en="(raw crawler log — kept in original Chinese)">[2026-10-15 12:44:59] 快照 page_packagist: 17KB
 [2026-10-15 12:44:59] 快照 page_nuget: 16KB
 [2026-10-15 12:44:59] 快照 page_pubdev: 32KB
@@ -275,7 +277,7 @@ Cannot access gated
 [2026-10-15 12:46:09] git git_llm4cyber 失败: Command '['git', 'clone', '--depth', '1', 'https://github.com/liu673/Awesome-LLM4Security', '/home/hongtao/llm-cyber-data/crawl5/g
 [2026-10-15 13:24:48] git git_webkit 失败: Command '['git', 'clone', '--depth', '1', 'https://github.com/WebKit/WebKit', '/home/hongtao/llm-cyber-data/crawl5/git/webkit']' t
 [2026-10-15 13:24:48] ===== 第五批结束：49/49 OK =====</pre>
-<div class="updated" id="upd" data-en="Generated at 2026-10-23 11:09:46">页面生成于 2026-10-23 11:09:46</div>
+<div class="updated" id="upd" data-en="Generated at 2026-10-23 11:26:47">页面生成于 2026-10-23 11:26:47</div>
 
 <script>
 var LANG = localStorage.getItem("cyberllmdata_lang") || "zh";
